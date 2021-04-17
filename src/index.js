@@ -5,6 +5,5 @@ import './styles/styles.scss'
 
 ReactDOM.render(
     <PokemonApp />,
-    
   document.getElementById('root')
 );

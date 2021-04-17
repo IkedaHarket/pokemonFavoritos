@@ -1,0 +1,12 @@
+.hamburger .hamburger-inner, 
+.hamburger .hamburger-inner:after, 
+.hamburger .hamburger-inner:before{
+    background-color: $blanco;
+    color: $blanco;
+}
+.hamburger.is-active .hamburger-inner, 
+.hamburger.is-active .hamburger-inner:after, 
+.hamburger.is-active .hamburger-inner:before{
+    background-color: $blanco;
+    color: $blanco;
+}

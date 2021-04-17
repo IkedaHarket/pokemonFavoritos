@@ -16,6 +16,7 @@ const AppRoutes = () => {
     return (
         <Router>
             <Header />
+            <div className="ajuste-header-fixed"></div>
           <div>
             <Switch>
               <Route path="/favoritos" exact component={Favoritos}/>
