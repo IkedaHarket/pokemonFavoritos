@@ -50,7 +50,16 @@ export const pokemonsReducer = (state = initialState , action)=>{
                 ...state,
                 buscarPokemon:action.payload
             }
-            
+        case types.pokemonActiveSet:
+            return{
+                ...state,
+                pokemonActivo:action.payload
+            }
+        case types.pokemonActiveClear:
+        return{
+            ...state,
+            pokemonActivo:null
+        }
         default:    
             return state;
     }

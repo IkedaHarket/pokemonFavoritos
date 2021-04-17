@@ -19,5 +19,10 @@
     h6{
         font-family: $fuenteSecundaria;
         font-size: $sizeMedia;
+        color: $negro;
+        
+    }
+    &:hover{
+        text-decoration: none;
     }
 }
