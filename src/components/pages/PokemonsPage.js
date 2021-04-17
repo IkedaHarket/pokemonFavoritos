@@ -1,10 +1,16 @@
 import React from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
+import Paginacion from '../ui/Paginacion'
 
 const PokemonsPage = () => {
     return (
-        <div>
-            <h1>Pokemons</h1>
-        </div>
+        <Container className="mt-5 flex-center">
+            <Row>
+                <Col xs={12}>
+                    <Paginacion />
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

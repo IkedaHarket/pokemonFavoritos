@@ -23,3 +23,15 @@ input,textarea{
     justify-content: center;
     align-items: center;
 }
+.boton{
+    border: 2px solid $rojo;
+    padding: 5px 10px;
+    background-color: $rojo;
+    color: $blanco;
+    transition: background-color $transisionTiempo ease,
+                color $transisionTiempo ease;
+    &:hover{
+        background-color: $blanco;
+        color: $rojo;
+    }
+}
