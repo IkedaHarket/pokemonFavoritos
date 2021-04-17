@@ -1,0 +1,113 @@
+.header{
+    height: 80px;
+    width: 100vw;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $rojo;
+    position: fixed;
+    z-index: 1000;
+}
+.header__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    .header__logo-link{
+        text-decoration: none;
+        font-family: $fuenteSecundaria;
+        color: $blanco;
+        font-size: 56px;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+}
+.ajuste-header-fixed{
+    height: 80px;
+    width: 100vw;
+    z-index: 1;
+}
+.nav{
+    z-index: 900;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    .nav__item{
+        margin: 0 20px;
+        .nav__item-navlink{
+            position: relative;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: $sizeMedia;
+            font-weight: 600;
+            color: $blanco;
+            img{
+                width: 30px;
+                height: 30px;
+                object-fit: contain;
+                margin-right: 10px;
+            }
+        }
+        .active{
+            color: $amarillo;
+        }
+    }
+}
+.menuXS{
+    background-color: $azul;
+    padding: 10px 50px;
+    transform: translateY(-100%);
+    transition: transform $transisionTiempo ease;
+    height: auto;
+    z-index: 900;
+    width: 100vw;
+    position: fixed;
+    .nav__item{
+        .nav__item-navlink{
+            margin:  25px 0;
+            position: relative;
+            width: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-decoration: none;
+            font-size: $sizeMedia;
+            font-weight: 600;
+            color: $blanco;
+            img{
+                width: 30px;
+                height: 30px;
+                object-fit: contain;
+                margin-right: 10px;
+            }
+        }
+        .active{
+            color: $amarillo;
+        }
+    }
+}
+.menuXS-active{
+    transform: translateY(80px);
+}
+@media screen and (max-width: 991px){
+    .header{
+        padding: 0 50px;
+    }
+    .nav{
+        display: none;
+    }
+}
+@media screen and (max-width: 576px){
+    .header__row{
+        .header__logo-link{
+            font-size: 34px;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: auto;
+}
+html,body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: $blanco;
+    font-family: $fuentePrimaria;
+}
+input,textarea{
+
+    outline: none;
+    border: none;
+    padding: 8px;
+    
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
