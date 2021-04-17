@@ -7,5 +7,5 @@ export const types = {
     nextPageClear:'[Pokemons] Siguiente Pagina Clear',
     previousPageSet:'[Pokemons] Anterior Pagina Set',
     previousPageClear:'[Pokemons] Anterior Pagina Clear',
-    
+    pokemonsSet: '[Pokemons] Set Pokemons',
 }
