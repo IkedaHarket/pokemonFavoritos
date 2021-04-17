@@ -1,3 +1,3 @@
 # IkedaPoke
 
-Pagina web para guardar tus [pokemons] favoritos.
+Pagina web para guardar tus **pokemons** favoritos.

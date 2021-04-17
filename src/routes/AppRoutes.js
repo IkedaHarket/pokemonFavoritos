@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
     BrowserRouter as Router,
     Switch,
@@ -10,9 +10,19 @@ import PokemonsPage from '../components/pages/PokemonsPage';
 import InicioPage from '../components/pages/InicioPage';
 import Header from '../components/ui/navbar/Header';
 import Favoritos from '../components/pages/Favoritos';
+import { useDispatch } from 'react-redux';
+import { pedirTipos } from '../actions/tipo';
+import { pedirHabitats } from '../actions/habitat';
 
 
 const AppRoutes = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(pedirTipos())
+    dispatch(pedirHabitats())
+  }, [dispatch])
     return (
         <Router>
             <Header />

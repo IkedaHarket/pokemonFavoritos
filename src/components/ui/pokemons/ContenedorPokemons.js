@@ -11,9 +11,11 @@ const ContenedorPokemons = () => {
         <Row className="flex-center">
             {
                 pokemons.map( pokemon=>(
-                    <Col xs={12} sm={6} lg={4} xl={3} key={pokemon.id} className="flex-center">
-                        <CardPokemon {...pokemon}/>
-                    </Col>
+                    (pokemon.sprites.other.dream_world.front_default) && (
+                        <Col xs={12} sm={6} lg={4} xl={3} key={pokemon.id} className="flex-center">
+                            <CardPokemon {...pokemon}/>
+                        </Col>
+                    )
                 ))
             }
         </Row>

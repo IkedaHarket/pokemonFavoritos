@@ -8,4 +8,10 @@ export const types = {
     previousPageSet:'[Pokemons] Anterior Pagina Set',
     previousPageClear:'[Pokemons] Anterior Pagina Clear',
     pokemonsSet: '[Pokemons] Set Pokemons',
+    pokemonBuscarSet: '[Pokemons] Set Buscar Pokemons',
+    pokemonBuscarClear: '[Pokemons] Clear Buscar Pokemons',
+
+    tiposPokemonSet: '[Tipos] Cargar tipos de pokemons',
+
+    habitatPokemonsSet: '[Habitats] Cargar habitats de pokemons',
 }

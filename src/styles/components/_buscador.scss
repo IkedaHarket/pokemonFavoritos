@@ -1,0 +1,25 @@
+.buscador{
+    display: flex;
+    input{
+        margin-right: 50px;
+    }
+    button{
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 576px){
+    .buscador{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input{
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        button{
+            width: 150px;
+            margin: 10px 0;
+        }
+    }
+}

@@ -17,7 +17,14 @@ input,textarea{
     outline: none;
     border: none;
     padding: 8px;
-    
+    border-bottom: 2px solid $rojo;
+    transition: border-bottom $transisionTiempo ease;
+    &:focus{
+        border-bottom: 2px solid $azul;
+    }
+    &:hover{
+        border-bottom: 2px solid $amarillo;
+    }
 }
 .flex-center{
     display: flex;

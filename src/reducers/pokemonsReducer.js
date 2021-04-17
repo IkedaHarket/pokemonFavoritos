@@ -1,6 +1,7 @@
 import { types } from "../types/types";
 
 const initialState = {
+    buscarPokemon:false,
     pageActiva:'',
     nextPage:'',
     previousPage:'',
@@ -39,6 +40,17 @@ export const pokemonsReducer = (state = initialState , action)=>{
                 ...state,
                 pokemons:[...action.payload]
             }
+        case types.pokemonBuscarClear:
+            return{
+                ...state,
+                buscarPokemon:false
+            }
+        case types.pokemonBuscarSet:
+            return{
+                ...state,
+                buscarPokemon:action.payload
+            }
+            
         default:    
             return state;
     }
