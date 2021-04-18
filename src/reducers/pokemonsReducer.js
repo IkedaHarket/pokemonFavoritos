@@ -7,13 +7,18 @@ const initialState = {
     previousPage:'',
     pokemonActivo: null,
     pokemons:[],
-    favoritos: JSON.parse(localStorage.getItem('pokemonsFavoritos')) || []
+    favoritos: JSON.parse(localStorage.getItem('pokemonsFavoritos')) || [],
+    cargarPokemons:true
 }
 
 export const pokemonsReducer = (state = initialState , action)=>{
 
     switch (action.type) {
-        
+        case types.pokemonSetCargarpokemons:
+            return{
+                ...state,
+                cargarPokemons: action.payload
+            }
         case types.pageActivaSet:
             return{
                 ...state,

@@ -2,6 +2,13 @@ import axios from 'axios';
 import { types } from "../types/types";
 
 
+export const setCargarPokemons = (bol) =>{
+    return{
+        type:types.pokemonSetCargarpokemons,
+        payload:bol
+    }
+}
+
 export const setPaginaActiva = (page)=>{
     return{
         type:types.pageActivaSet,
@@ -57,8 +64,6 @@ export const buscarpokemons = (nombre) =>{
     const pokemons = [];
     return async(dispatch) =>{
         let res = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1118`);
-            
-        
         res.data.results.map(async(pokemon)=>{
             // console.log(pokemon.name.includes(nombre))
             if(pokemon.name.includes(nombre)){
@@ -68,8 +73,6 @@ export const buscarpokemons = (nombre) =>{
                 dispatch(setPokemons(pokemons))
             }
         })
-            
-            
     }
 }
 export const pokemonActivoSet =(pokemon)=>{

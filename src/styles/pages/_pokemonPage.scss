@@ -41,6 +41,7 @@
 }
 @media screen and (max-width: 1000px){
     .pokemonPage{
+        // padding-bottom: 150px;
         .pokemonPage__content{
             margin-top: 30px;
             position: relative;
@@ -49,6 +50,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 100px;
             h3{
                 font-family: $fuenteSecundaria;
                 font-size: $sizeTitulo;

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { pedirPokemons } from '../../actions/pokemons'
+import { buscarpokemons, pedirPokemons, setCargarPokemons } from '../../actions/pokemons'
 import Paginacion from '../ui/Paginacion'
 import Buscador from '../ui/pokemons/Buscador'
 import ContenedorPokemons from '../ui/pokemons/ContenedorPokemons'
@@ -14,7 +14,7 @@ const PokemonsPage = () => {
         localStorage.setItem('pagePokemon',JSON.stringify(pageActiva))
         dispatch(pedirPokemons(pageActiva))
     }, [dispatch,pageActiva])
-
+    
     return (
         <Container className="mt-5 flex-center">
             <Row>
@@ -32,10 +32,13 @@ const PokemonsPage = () => {
                 {(!buscarPokemon) && (
                     <Col xs={12}>
                         <Paginacion />
+                        <div className="mb-5"></div>
                     </Col>
                 )}
             </Row>
+            
         </Container>
+        
     )
 }
 

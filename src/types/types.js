@@ -15,6 +15,7 @@ export const types = {
     pokemonActiveClear: '[Pokemons] Clear Pokemon activo',
     pokemonAgregarFavorito: '[Pokemons] Agregar Pokemon Activo',
     pokemonQuitarFavorito: '[Pokemons] Quitar Pokemon Activo',
+    pokemonSetCargarpokemons: '[Pokemons] Set Cargar Pokemons',
     
 
     tiposPokemonSet: '[Tipos] Cargar tipos de pokemons',
