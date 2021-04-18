@@ -28,14 +28,19 @@
             position: absolute;
             bottom: 0;
         }
+        .pokemonPage__content-tipo{
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .pokemonPage__content-juegos, .pokemonPage__content-habilidades{
+            width: 500px;
+        }
     }
 }
 @media screen and (max-width: 1000px){
     .pokemonPage{
-        .pokemonPage__img{
-            img{
-            }
-        }
         .pokemonPage__content{
             margin-top: 30px;
             position: relative;
@@ -54,6 +59,11 @@
                 text-decoration: none;
                 position: absolute;
                 bottom: -50px;
+            }
+            .pokemonPage__content-juegos, .pokemonPage__content-habilidades{
+                max-width: 300px;
+                text-align: center;
+                padding: 0 20px;
             }
         }
     }

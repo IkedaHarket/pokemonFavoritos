@@ -3,7 +3,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import { clearPokemonActivo } from '../../actions/pokemons';
-import { traducirHabitat, traducirTipo } from '../../helpers/traductores';
+import { agregarIconoTipo } from '../../helpers/agregarIcono';
+import { traducirHabilidad, traducirHabitat, traducirTipo } from '../../helpers/traductores';
 
 const PokemonPage = () => {
     const history = useHistory();
@@ -11,7 +12,6 @@ const PokemonPage = () => {
     const pokemonActivo = JSON.parse(localStorage.getItem('pokemonActivo')) || history.push('/');
 
     const {habitats} = useSelector(state => state.habitat)
-    // const {tipos} = useSelector(state => state.tiposPokemons)
 
     const handleVolver = ()=>{
         dispatch(clearPokemonActivo());
@@ -24,6 +24,11 @@ const PokemonPage = () => {
     })
     nombreHabitat = traducirHabitat(nombreHabitat);
     const tipo = traducirTipo(pokemonActivo.types[0].type.name);
+
+    const juegos = pokemonActivo.game_indices.map(juego=>juego.version.name)
+
+    const habilidades = pokemonActivo.abilities.map(habilidad=>habilidad.ability.name)
+
     return (
         <>
         <Container fluid className="mt-5">
@@ -34,7 +39,19 @@ const PokemonPage = () => {
                 <Col xs={12} md={6} className="pokemonPage__content">
                     <h3>{pokemonActivo?.name.toUpperCase()}</h3>
                     <p><strong>Habitat:</strong> {nombreHabitat}</p>
-                    <p><strong>Tipo:</strong> {tipo}</p>
+                    <p className="pokemonPage__content-tipo"><strong>Tipo: </strong> 
+                        <img src={agregarIconoTipo(tipo)} alt={tipo}/> {tipo}
+                    </p>
+                    <p className="pokemonPage__content-juegos"><strong>Juegos: </strong><br />
+                        {
+                            juegos.map(juego=>(`${juego}, `))
+                        }
+                    </p>
+                    <p className="pokemonPage__content-habilidades"><strong>Habilidades: </strong><br />
+                        {
+                            habilidades.map(habilidad=>(`${traducirHabilidad(habilidad)}, `))
+                        }
+                    </p>
                     <Link
                     to="/pokemons"
                     className="boton"
