@@ -7,11 +7,13 @@ export const types = {
     nextPageClear:'[Pokemons] Siguiente Pagina Clear',
     previousPageSet:'[Pokemons] Anterior Pagina Set',
     previousPageClear:'[Pokemons] Anterior Pagina Clear',
+    pageActivaSet:'[Pokemons] Set pagina Activa',
     pokemonsSet: '[Pokemons] Set Pokemons',
     pokemonBuscarSet: '[Pokemons] Set Buscar Pokemons',
     pokemonBuscarClear: '[Pokemons] Clear Buscar Pokemons',
     pokemonActiveSet: '[Pokemons] Set Pokemon activo',
     pokemonActiveClear: '[Pokemons] Clear Pokemon activo',
+    
 
     tiposPokemonSet: '[Tipos] Cargar tipos de pokemons',
 

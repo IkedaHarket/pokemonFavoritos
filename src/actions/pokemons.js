@@ -1,6 +1,13 @@
 import axios from 'axios';
 import { types } from "../types/types";
 
+
+export const setPaginaActiva = (page)=>{
+    return{
+        type:types.pageActivaSet,
+        payload:page
+    }
+}
 export const previousPageClear = ()=>({type:types.previousPageClear})
 export const previousPage = (previousPage)=>{
     return{
@@ -21,7 +28,8 @@ export const setPokemons = (pokemons)=>{
         payload:pokemons
     }
 }
-export const pedirPokemons = (page='0') =>{
+export const pedirPokemons = () =>{
+    const page = JSON.parse(localStorage.getItem('pagePokemon')) || 0
     const pokemons = [];
     return async(dispatch) =>{
         let res = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${page*20}&limit=20`);

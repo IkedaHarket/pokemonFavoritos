@@ -8,12 +8,12 @@ import ContenedorPokemons from '../ui/pokemons/ContenedorPokemons'
 
 const PokemonsPage = () => {
     const dispatch = useDispatch();
-    const {buscarPokemon} = useSelector(state => state.pokemons)
-    const [page, setPage] = useState(0)
+    const {buscarPokemon,pageActiva} = useSelector(state => state.pokemons)
 
     useEffect(() => {
-        dispatch(pedirPokemons(page))
-    }, [dispatch,page])
+        localStorage.setItem('pagePokemon',JSON.stringify(pageActiva))
+        dispatch(pedirPokemons(pageActiva))
+    }, [dispatch,pageActiva])
 
     return (
         <Container className="mt-5 flex-center">
@@ -23,7 +23,7 @@ const PokemonsPage = () => {
                 </Col>
                 {(!buscarPokemon) && (
                     <Col xs={12} lg={6}>
-                        <Paginacion setPage={setPage}/>
+                        <Paginacion />
                     </Col>
                 )}
                 <Col xs={12} className="my-4">
@@ -31,7 +31,7 @@ const PokemonsPage = () => {
                 </Col>
                 {(!buscarPokemon) && (
                     <Col xs={12}>
-                        <Paginacion setPage={setPage}/>
+                        <Paginacion />
                     </Col>
                 )}
             </Row>

@@ -2,7 +2,7 @@ import { types } from "../types/types";
 
 const initialState = {
     buscarPokemon:false,
-    pageActiva:'',
+    pageActiva:JSON.parse(localStorage.getItem('pagePokemon')) || 0,
     nextPage:'',
     previousPage:'',
     pokemonActivo: null,
@@ -13,11 +13,15 @@ export const pokemonsReducer = (state = initialState , action)=>{
 
     switch (action.type) {
         
+        case types.pageActivaSet:
+            return{
+                ...state,
+                pageActiva:action.payload
+            }
         case types.nextPageSet:
             return{
                 ...state,
-                nextPage:action.payload,
-                pageActiva:action.payload
+                nextPage:action.payload
             }
         case types.nextPageClear:
             return{
@@ -27,8 +31,7 @@ export const pokemonsReducer = (state = initialState , action)=>{
         case types.previousPageSet:
             return{
                 ...state,
-                previousPage:action.payload,
-                pageActiva:action.payload
+                previousPage:action.payload
             }
         case types.previousPageClear:
             return{

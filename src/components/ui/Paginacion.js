@@ -1,15 +1,17 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { setPaginaActiva } from '../../actions/pokemons'
 
-const Paginacion = ({setPage}) => {
+const Paginacion = () => {
 
-    const {nextPage,previousPage} = useSelector(state => state.pokemons)
+    const {nextPage,previousPage,pageActiva} = useSelector(state => state.pokemons)
+    const dispatch = useDispatch()
     
     const handleAnterior = ()=>{
-        setPage(page=>(page - 1))
+        dispatch(setPaginaActiva(pageActiva-1))
     }
     const handleSiguiente = ()=>{
-        setPage(page=>(page + 1))
+        dispatch(setPaginaActiva(pageActiva+1))
     }
     return (
         <div className="paginacion">
@@ -22,6 +24,7 @@ const Paginacion = ({setPage}) => {
                     Anterior
                 </button>
             }
+            {pageActiva}
             {
                 (nextPage) &&
                 <button
