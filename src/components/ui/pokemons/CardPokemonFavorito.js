@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom'
 import { agregarFavoritoApp, pokemonActivoSet, quitarFavoritoApp } from '../../../actions/pokemons'
 import { iconos } from '../../../images/icons'
 
-const CardPokemon = ({...pokemon}) => {
+const CardPokemonFavorito = ({...pokemon}) => {
+
     const dispatch = useDispatch()
     const {favoritos} = useSelector(state => state.pokemons)
-    
-    localStorage.setItem('pokemonsFavoritos',JSON.stringify(favoritos))
-    
     const {id,name,sprites} = pokemon
 
     const handlePokemonActive =()=>{
@@ -17,7 +15,7 @@ const CardPokemon = ({...pokemon}) => {
     }
     let esFavorito = false;
     favoritos.forEach(favorito =>{
-        if(favorito.id === pokemon.id)return  esFavorito = true
+        if(favorito.id === pokemon.id) return esFavorito = true
     })
     const handleAddFavorito = ()=>{
         if (esFavorito){
@@ -36,7 +34,7 @@ const CardPokemon = ({...pokemon}) => {
                 onClick={handleAddFavorito}
                 />
             </div>
-            <Link 
+            <Link
             onClick={handlePokemonActive}
             className="cardPokemon__link"
             to={`/pokemon/${id}`}
@@ -51,4 +49,4 @@ const CardPokemon = ({...pokemon}) => {
     )
 }
 
-export default CardPokemon
+export default CardPokemonFavorito

@@ -6,7 +6,8 @@ const initialState = {
     nextPage:'',
     previousPage:'',
     pokemonActivo: null,
-    pokemons:[]
+    pokemons:[],
+    favoritos: JSON.parse(localStorage.getItem('pokemonsFavoritos')) || []
 }
 
 export const pokemonsReducer = (state = initialState , action)=>{
@@ -59,10 +60,23 @@ export const pokemonsReducer = (state = initialState , action)=>{
                 pokemonActivo:action.payload
             }
         case types.pokemonActiveClear:
-        return{
-            ...state,
-            pokemonActivo:null
-        }
+            return{
+                ...state,
+                pokemonActivo:null
+            }
+        case types.pokemonAgregarFavorito:
+            return{
+                ...state,
+                favoritos:[
+                    ...state.favoritos,
+                    action.payload
+                ]
+            }
+        case types.pokemonQuitarFavorito:
+            return{
+                ...state,
+                favoritos: state.favoritos.filter(favorito => favorito.id !== action.payload)
+            }
         default:    
             return state;
     }

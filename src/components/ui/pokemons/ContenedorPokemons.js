@@ -16,6 +16,7 @@ const ContenedorPokemons = () => {
                             <CardPokemon {...pokemon}/>
                         </Col>
                     )
+                    
                 ))
             }
         </Row>

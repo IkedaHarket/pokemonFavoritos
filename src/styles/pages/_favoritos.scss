@@ -1,0 +1,12 @@
+.favoritosPage{
+    text-align: center;
+    font-size: 5rem;
+    font-family: $fuenteSecundaria;
+    color: $azul;
+    margin: 20px 0;
+}
+@media screen and (max-width: 400px){
+    .favoritosPage{
+        font-size: 3rem;
+    }
+}

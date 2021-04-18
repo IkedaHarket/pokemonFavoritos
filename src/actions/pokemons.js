@@ -80,3 +80,16 @@ export const pokemonActivoSet =(pokemon)=>{
     }
 }
 export const clearPokemonActivo = ()=>({type:types.pokemonActiveClear})
+
+export const agregarFavoritoApp = (pokemon)=>{
+    return{
+        type:types.pokemonAgregarFavorito,
+        payload:pokemon
+    }
+}
+export const quitarFavoritoApp = (pokemonId)=>{
+    return{
+        type:types.pokemonQuitarFavorito,
+        payload:pokemonId
+    }
+}

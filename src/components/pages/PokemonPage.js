@@ -14,6 +14,7 @@ const PokemonPage = () => {
     const {habitats} = useSelector(state => state.habitat)
 
     const handleVolver = ()=>{
+        history.goBack();
         dispatch(clearPokemonActivo());
     }
     let nombreHabitat = ''
@@ -53,7 +54,8 @@ const PokemonPage = () => {
                         }
                     </p>
                     <Link
-                    to="/pokemons"
+                    to=""
+                    // to={history.goBack()}
                     className="boton"
                     onClick={handleVolver}
                     >
