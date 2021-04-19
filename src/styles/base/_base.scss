@@ -11,6 +11,7 @@ html,body{
     background-color: $blanco;
     font-family: $fuentePrimaria;
 }
+
 input,textarea{
 
     outline: none;
@@ -40,5 +41,74 @@ input,textarea{
     &:hover{
         background-color: $blanco;
         color: $rojo;
+    }
+}
+.circulo{
+    border-radius: 100%;
+}
+.amarillo{
+    background-color: $amarillo;
+}
+.azul{
+    background-color: $azul;
+}
+.rojo{
+    background-color: $rojo;
+}
+.negro{
+    background-color: $negro;
+}
+.blanco{
+    background-color: $blanco;
+}
+
+
+//DARK
+
+body.dark{
+    background-color: $negro;
+    input{
+        background-color: lighten($color: $negro, $amount: 10);
+        color: $blanco;
+    }
+}
+body.yellow{
+    input,textarea{
+        border-bottom: 2px solid $amarillo;
+        &:focus{
+            border-bottom: 2px solid $azul;
+        }
+        &:hover{
+            border-bottom: 2px solid $rojo;
+        }
+    }
+    .boton{
+        border: 2px solid $amarillo;
+        background-color: $amarillo;
+        color: $blanco;
+        &:hover{
+            background-color: $blanco;
+            color: $amarillo;
+        }
+    }
+}
+body.blue{
+    input,textarea{
+        border-bottom: 2px solid $azul;
+        &:focus{
+            border-bottom: 2px solid $amarillo;
+        }
+        &:hover{
+            border-bottom: 2px solid $rojo;
+        }
+    }
+    .boton{
+        border: 2px solid $azul;
+        background-color: $azul;
+        color: $blanco;
+        &:hover{
+            background-color: $blanco;
+            color: $azul;
+        }
     }
 }

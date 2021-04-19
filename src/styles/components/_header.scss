@@ -59,6 +59,20 @@
             color: $amarillo;
         }
     }
+    
+    
+}
+.temas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .circulo{
+        border: 1px solid $blanco;
+        cursor: pointer;
+        margin: 0 10px;
+        width: 30px;
+        height: 30px;
+    }
 }
 .menuXS{
     background-color: $azul;
@@ -69,6 +83,9 @@
     z-index: 900;
     width: 100vw;
     position: fixed;
+    .temas{
+        justify-content: end;
+    }
     .nav__item{
         .nav__item-navlink{
             margin:  25px 0;
@@ -108,6 +125,79 @@
     .header__row{
         .header__logo-link{
             font-size: 34px;
+        }
+    }
+}
+
+body.yellow{
+    .header{
+        background-color: $amarillo;
+    }
+    .header__row{
+        .header__logo-link{
+            color: $blanco;
+        }
+    }
+    .nav{
+        .nav__item{
+            .nav__item-navlink{
+                color: $blanco;
+            }
+            .active{
+                color: $azul;
+            }
+        }
+    }
+    .temas{
+        .circulo{
+            border: 1px solid $blanco;
+        }
+    }
+    .menuXS{
+        background-color: $amarillo;
+        .nav__item{
+            .nav__item-navlink{
+                color: $blanco;
+            }
+            .active{
+                color: $amarillo;
+            }
+        }
+    }
+}
+body.blue{
+    .header{
+        background-color: $azul;
+    }
+    .header__row{
+        .header__logo-link{
+            color: $blanco;
+        }
+    }
+    .nav{
+        .nav__item{
+            .nav__item-navlink{
+                color: $blanco;
+            }
+            .active{
+                color: $amarillo;
+            }
+        }
+    }
+    .temas{
+        .circulo{
+            border: 1px solid $blanco;
+        }
+    }
+    .menuXS{
+        background-color: $azul;
+        .nav__item{
+            .nav__item-navlink{
+                color: $blanco;
+            }
+            .active{
+                color: $amarillo;
+            }
         }
     }
 }

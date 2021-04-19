@@ -7,7 +7,6 @@ import {
   } from "react-router-dom";
 import PokemonPage from '../components/pages/PokemonPage';
 import PokemonsPage from '../components/pages/PokemonsPage';
-import InicioPage from '../components/pages/InicioPage';
 import Header from '../components/ui/navbar/Header';
 import Favoritos from '../components/pages/Favoritos';
 import { useDispatch } from 'react-redux';

@@ -2,6 +2,9 @@ export const types = {
 
     uiHamburger : '[Hamburger] BTN',
     uiHamburgerClose : '[Hamburger] BTN Close',
+    uiSetTemaOscuro : '[Hamburger] Set tema oscuro',
+    uiSetTemaYellow : '[Hamburger] Set tema yellow',
+    uiSetTemaBlue : '[Hamburger] Set tema blue',
 
     nextPageSet:'[Pokemons] Siguiente Pagina Set',
     nextPageClear:'[Pokemons] Siguiente Pagina Clear',

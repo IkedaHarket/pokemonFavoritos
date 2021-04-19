@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { buscarpokemons, pedirPokemons, setCargarPokemons } from '../../actions/pokemons'
+import { pedirPokemons } from '../../actions/pokemons'
 import Paginacion from '../ui/Paginacion'
 import Buscador from '../ui/pokemons/Buscador'
 import ContenedorPokemons from '../ui/pokemons/ContenedorPokemons'

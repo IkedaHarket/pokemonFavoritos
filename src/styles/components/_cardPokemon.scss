@@ -57,3 +57,17 @@
         }
     }
 }
+
+body.dark{
+    .cardPokemon{
+        .cardPokemon__link{
+            h6{
+                color: $blanco;
+            }
+        }
+        &:hover{
+            border: 2px solid $azul;
+            box-shadow: 3px 3px 3px $azul;
+        }
+    }
+}

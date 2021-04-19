@@ -1,7 +1,11 @@
 import { types } from "../types/types";
 
 const initialState = {
-    hamburger: false
+    hamburger: false,
+    temaDark: JSON.parse(localStorage.getItem('pokeNoche')) || false,
+    temaYellow: JSON.parse(localStorage.getItem('pokeYellow')) || false,
+    temaBlue: JSON.parse(localStorage.getItem('pokeBlue')) || false,
+    
 }
 
 export const uiReducer = (state = initialState , action)=>{
@@ -18,7 +22,21 @@ export const uiReducer = (state = initialState , action)=>{
                 ...state,
                 hamburger: false
             }
-
+        case types.uiSetTemaOscuro:
+            return{
+                ...state,
+                temaDark: action.payload
+            }
+        case types.uiSetTemaYellow:
+            return{
+                ...state,
+                temaYellow: action.payload
+            }
+        case types.uiSetTemaBlue:
+            return{
+                ...state,
+                temaBlue: action.payload
+            }
         default:    
             return state;
     }

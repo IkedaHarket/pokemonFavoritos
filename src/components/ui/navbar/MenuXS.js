@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux'
 import NavItem from './NavItem'
 
 import { iconos } from '../../../images/icons'
-const {iconEevee,iconPokebola,iconEstrella} = iconos
+import Temas from './Temas'
+const {iconEevee,iconEstrella} = iconos
 
 
 const MenuXS = () => {
@@ -11,8 +12,10 @@ const MenuXS = () => {
     return (
         <div className={`menuXS ${(hamburger) && `menuXS-active`}`}>
             {/* <NavItem to="/" icon={iconPokebola} page="Inicio"/> */}
+            
             <NavItem to="/pokemons" icon={iconEevee} page="Pokemons"/>
             <NavItem to="/favoritos" icon={iconEstrella} page="Favoritos"/>
+            <Temas />
         </div>
     )
 }
