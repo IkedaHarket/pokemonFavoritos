@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import { clearPokemonActivo } from '../../actions/pokemons';
 import { agregarIconoTipo } from '../../helpers/agregarIcono';
-import { traducirHabilidad, traducirHabitat, traducirTipo } from '../../helpers/traductores';
+import { traducirHabilidad, traducirHabitat, traducirJuego, traducirTipo } from '../../helpers/traductores';
 
 const PokemonPage = () => {
     const history = useHistory();
@@ -45,7 +45,7 @@ const PokemonPage = () => {
                     </p>
                     <p className="pokemonPage__content-juegos"><strong>Juegos: </strong><br />
                         {
-                            juegos.map(juego=>(`${juego}, `))
+                            juegos.map(juego=>(`${traducirJuego(juego)}, `))
                         }
                     </p>
                     <p className="pokemonPage__content-habilidades"><strong>Habilidades: </strong><br />

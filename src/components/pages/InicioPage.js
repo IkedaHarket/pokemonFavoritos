@@ -1,15 +1,13 @@
+
 import React from 'react'
 
 
 const InicioPage = () => {
     
     return (
-        <>
-
-
-            <h1>inicio</h1>
+        <div className="inicioPage">
             
-        </>
+        </div>
     )
 }
 

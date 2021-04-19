@@ -10,7 +10,7 @@ const MenuXS = () => {
     const {hamburger} = useSelector(state => state.ui)
     return (
         <div className={`menuXS ${(hamburger) && `menuXS-active`}`}>
-            <NavItem to="/" icon={iconPokebola} page="Inicio"/>
+            {/* <NavItem to="/" icon={iconPokebola} page="Inicio"/> */}
             <NavItem to="/pokemons" icon={iconEevee} page="Pokemons"/>
             <NavItem to="/favoritos" icon={iconEstrella} page="Favoritos"/>
         </div>

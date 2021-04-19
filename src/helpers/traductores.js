@@ -34,6 +34,32 @@ export const traducirTipo = (tipo) =>{
     if(tipo === 'shadow') return 'Sombra'
     return tipo
 }
+export const traducirJuego = (juego) =>{
+    switch (juego) {
+        case 'red': return 'Rojo';
+        case 'blue': return 'Azul';
+        case 'yellow': return 'Amarillo';
+        case 'gold': return 'Oro';
+        case 'silver': return 'Plata';
+        case 'crystal': return 'Cristal';
+        case 'ruby': return 'Ruby';
+        case 'sapphire': return 'Zafiro';
+        case 'emerald': return 'Esmeralda';
+        case 'firered': return 'Rojo Fuego';
+        case 'leafgreen': return 'Verde Hoja';
+        case 'diamond': return 'Diamante';
+        case 'pearl': return 'Perla';
+        case 'platinum': return 'Platino';
+        case 'heartgold': return 'Corazon De Oro';
+        case 'soulsilver': return 'Alma De Plata';
+        case 'black': return 'Negro';
+        case 'white': return 'Blanco';
+        case 'black-2': return 'Negro-2';
+        case 'white-2': return 'Blanco-2';
+    
+        default: return juego
+    }
+}
 export const traducirHabilidad = (habilidad) =>{
     switch (habilidad) {
         case 'stench': return 'Hedor'

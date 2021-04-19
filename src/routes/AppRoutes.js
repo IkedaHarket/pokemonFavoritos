@@ -32,8 +32,8 @@ const AppRoutes = () => {
               <Route path="/favoritos" exact component={Favoritos}/>
               <Route path="/pokemons" exact component={PokemonsPage}/>
               <Route path="/pokemon/:id" exact component={PokemonPage}/>
-              <Route path="/" exact component={InicioPage}/>
-              <Redirect to="/" />
+              {/* <Route path="/" exact component={InicioPage}/> */}
+              <Redirect to="/pokemons" />
             </Switch>
           </div>
         </Router>
